@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { auth, provider, db } from "../Firebase.js"
 import { signInWithPopup } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection,  query, where, doc, getDocs  } from "firebase/firestore";
 import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
@@ -36,7 +36,7 @@ function SignIn() {
       if(auth.currentUser.emailVerified === true){
         setIsAuth(true);
         localStorage.setItem("isAuth", true);
-
+        getDataUser();
         const emailUser = auth.currentUser.email;
         localStorage.setItem("email", emailUser);
 
@@ -87,7 +87,23 @@ function SignIn() {
       console.log(isAuth);
     };
   //Verify Data///////////
-
+  
+  const getDataUser = async () => {
+    const q = query(collection(db, "users"), where("email", "==", localStorage.getItem("email")));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        if(doc.get("email") == auth.currentUser.email){
+            const name = String(doc.get("username"));
+            console.log(name)
+            auth.currentUser.displayName = name;
+            const email = auth.currentUser.email;
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+        }
+      });
+    return(localStorage.getItem("name"));
+  };
 
 
   
