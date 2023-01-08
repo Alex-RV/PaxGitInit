@@ -386,3 +386,31 @@
   justify-content: center;
   margin: 10px;
 }
+
+.contacts{
+  display: inline-block;
+  align-items: center;
+  font-size: 24px;
+  margin: 10vh 40vh 0vh 40vh
+}
+
+#sectionHeader{
+  display: inline-block;
+  font-size: 36px;
+  margin: 10vh 40vh 0vh 40vh
+}
+
+.About{
+  margin: 10vh 5vh 5vh 10vh;
+  display: flex;
+}
+
+.aboutBorder{
+  margin: 5vh 2vh 30vh 2vh;
+  text-align: center;
+  ;
+}
+
+#imageDisplay {
+
+}
