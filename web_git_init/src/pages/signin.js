@@ -10,6 +10,7 @@ import "./styles.css"
 import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+  localStorage.setItem('alerted','no');
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 

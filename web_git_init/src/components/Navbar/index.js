@@ -53,7 +53,7 @@ function NavBarIndex() {
             id="collasible-nav-dropdown" >
             {isAuth && <NavDropdown.Item  href="/profile">Profile</NavDropdown.Item>}
               {/* <NavDropdown.Item href="/communication/blog">Blog</NavDropdown.Item> */}
-              <NavDropdown.Divider />
+              {isAuth && <NavDropdown.Divider />}
               <NavDropdown.Item href="/communication/connectwithus">Connect With Us</NavDropdown.Item>
             </NavDropdown>
 			      <Nav.Link href="/communication/blog">Blog</Nav.Link>
