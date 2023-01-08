@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './MyStyles.css';
 const Ptsd = () => {
   return (
     <>
@@ -10,16 +10,19 @@ const Ptsd = () => {
       <div id = "Section">
         <p><b>Cause:</b> Although there are countless causes for PTSD, here are some of the more commmon ones.</p>      
         <ul id="list">
+          <ol id ="doubleBulletPoints">
           <li>Physical or sexual abuse/violence</li>
           <li>Death of a loved one</li>
           <li>Witnessing injury</li>
           <li>Exposure to natural disaster</li>
           <li>Victim of serious crime</li>
+          </ol>
         </ul>
       </div>
       <div id='Section'>
       <p><b>Symptoms:</b> Symptoms vary drastically depending on the patients age, sex, and cause.</p>      
         <ul id="list">
+        <ol id ="doubleBulletPoints">
           <li>Flashbacks</li>
           <li>Nightmares </li>
           <li>Severe anxiety</li>
@@ -28,6 +31,7 @@ const Ptsd = () => {
           <li>Severe emotional distress or physical reactions</li>
           <li>Feelings of detachments</li>
           <li>Hopelessness</li>
+        </ol>
         </ul>
       </div>
 

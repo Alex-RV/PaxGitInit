@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { auth, provider } from "../Firebase.js"
-import { signInWithPopup } from "firebase/auth"
+import { auth, provider, db } from "../Firebase.js"
+import { signInWithPopup } from "firebase/auth";
+import { addDoc, collection,  query, where, doc, getDocs  } from "firebase/firestore";
 import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
@@ -9,11 +10,12 @@ import "./styles.css"
 import { useNavigate } from "react-router-dom";
 
 function SignIn() {
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPassword, setLoginPassword] = useState("");
-  
-    const [user, setUser] = useState({});
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  localStorage.setItem('alerted','no');
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const [user, setUser] = useState({});
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   
 
   let navigate = useNavigate();
@@ -35,6 +37,10 @@ function SignIn() {
       if(auth.currentUser.emailVerified === true){
         setIsAuth(true);
         localStorage.setItem("isAuth", true);
+        getDataUser();
+        const emailUser = auth.currentUser.email;
+        localStorage.setItem("email", emailUser);
+
         window.location.pathname = "/";
       }
       else if(auth.currentUser.emailVerified === false){
@@ -82,7 +88,23 @@ function SignIn() {
       console.log(isAuth);
     };
   //Verify Data///////////
-
+  
+  const getDataUser = async () => {
+    const q = query(collection(db, "users"), where("email", "==", localStorage.getItem("email")));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        if(doc.get("email") == auth.currentUser.email){
+            const name = String(doc.get("username"));
+            console.log(name)
+            auth.currentUser.displayName = name;
+            const email = auth.currentUser.email;
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+        }
+      });
+    return(localStorage.getItem("name"));
+  };
 
 
   
@@ -94,6 +116,8 @@ function SignIn() {
         <input
           placeholder="Email..."
           type="email"
+          class="form__field"
+          id='name' 
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
@@ -101,38 +125,22 @@ function SignIn() {
         <input
           placeholder="Password..."
           type="password"
+          class="form__field"
           onChange={(event) => {
             setLoginPassword(event.target.value);
           }}
         />
+        
 
-        <button onClick={login}> Login</button>
-        <h6>Not yet register? <span>
-        <form action="/signup" class="inline">
-            <button class="float-left submit-button" >SignUp</button>
+        <button onClick={login} class="button-27" role="button"> Login</button>
+
+
+        <h6 id='RegisterYet'>Not yet register? <span>
+        <form action="/signup" id='RegisterYet'>
+            <button id='ButtonSignUp' class="button-27" role="button" >SignUp</button>
         </form>
         </span></h6>
       </div>
-    {/* <form action="">
-        <h1>Sign in</h1>
-        <input placeholder="Email..." 
-        onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }} />
-        <input placeholder="Password..." 
-        onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }} />
-        <button onClick={login}>Sign in </button>
-        <button onClick={verify}> verify</button>
-
-        <h6>Not yet register? <span>
-        <form action="/signup" class="inline">
-            <button class="float-left submit-button" >SignUp</button>
-        </form>
-        </span></h6>
-    </form> */}
-
 
     <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign-In with Google</button>
 
