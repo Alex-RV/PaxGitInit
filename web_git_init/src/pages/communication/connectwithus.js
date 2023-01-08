@@ -35,7 +35,7 @@ function connectWithUs() {
         <img src="https://media.discordapp.net/attachments/1032431371811033169/1061734633227681832/me2.jpg" alt="d" height="240px" width = "240px"/>
           <div className='aboutBorder'>
             <h2 style={{fontSize: "30px"}}>Johnny Zheng</h2>
-            <p>Game developer</p>
+            <p>Game Developer</p>
             <p>Email: johnnyz.0527@gmail.com</p>
           </div>
         </div>
@@ -43,8 +43,8 @@ function connectWithUs() {
         <img src="https://media.discordapp.net/attachments/1023323003213328448/1061734415492980736/Capture.PNG" alt="d" height="240px" width = "240px"/>
           <div className='aboutBorder'>
             <h2 style={{fontSize: "30px"}}>Elijah Cononigo</h2>
-            <p>Editor</p>
-            <p>Email: aleksandr.riabov@csedge.org</p>
+            <p>Editor & Game Developer</p>
+            <p>Email: canonigoelijah23@gmail.com</p>
           </div>
         </div>
         </div>
