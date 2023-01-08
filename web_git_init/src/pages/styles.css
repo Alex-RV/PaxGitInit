@@ -130,6 +130,8 @@
   margin-bottom: 10vh;
 }
 
+<<<<<<< HEAD
+=======
 .wrapper {
   display: flex;
   width: 100%;
@@ -417,21 +419,31 @@
 #imageDisplay {
 
 }
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 .trueBubble{
 align-self: center;
 text-align: center;
 border-radius:20px 20px 20px 20px;
 -moz-border-radius:20px 20px 20px 20px;
 -webkit-border-radius:20px 20px 40px 20px;
+<<<<<<< HEAD
+background:#edd68a; 
+height:230px;
+=======
 background:#7c06ab; 
 height:240px;
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 width: 280px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 display: inline-block;
 position: absolute;
 right: 575px;
 top: 430px;
+<<<<<<< HEAD
+transition: width 4s,  height 6s;
+=======
 transition: width 2s,  height 4s;
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 }
 
 
@@ -441,7 +453,11 @@ align-self: center;
 border-radius:10px 10px 10px 10px;
 -moz-border-radius:10px 10px 10px 10px;
 -webkit-border-radius:10px 10px 10px 10px;
+<<<<<<< HEAD
+background:#edd68a; 
+=======
 background:#7c06ab; 
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 height:245px;
 width:700px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;  
@@ -452,11 +468,67 @@ grid-row-end: 3;
 }
 
 .trueBubble:hover {
+<<<<<<< HEAD
+  width: 360px;
+=======
   width: 500px;
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
   height: 248px;
   
 }
 
+<<<<<<< HEAD
+.Shape{
+align-self: center;
+text-align: center;
+border-radius:20px 20px 20px 20px;
+-moz-border-radius:20px 20px 20px 20px;
+-webkit-border-radius:20px 20px 40px 20px;
+background:#edd68a; 
+height:240px;
+width: 280px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+display: inline-block;
+position: absolute;
+right: 975px;
+top: 130px;
+transition: width 2s,  height 4.1s;
+animation: trueShape 5s infinite;
+}
+
+.trueShape{
+
+text-align: center;
+align-self: center;
+border-radius:10px 10px 10px 10px;
+-moz-border-radius:10px 10px 10px 10px;
+-webkit-border-radius:10px 10px 10px 10px;
+background:#edd68a; 
+height:245px;
+width:500px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;  
+right: -800px;
+top: 130px;
+position: absolute;
+transition: width 2s,  height 4.1s ;
+animation-name: trueShape;
+animation: trueShape 8s infinite;
+}
+
+.trueShape:hover {
+  width: 700px;
+  height: 248px;
+  
+}
+
+@keyframes trueShape{
+  
+  0%   {background-color:#edd68a;}
+  25%  {background-color:#ebcc65}
+  50%  {background-color:#e4bf48}
+  75%  {background-color:#e8c143}
+  100% {background-color:#dab12b}
+=======
 img{
   border-radius: 20px;
   border-style: solid;
@@ -464,6 +536,7 @@ img{
 }
 .contentAlign{
   align-items: center;
+>>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 }
 
 
