@@ -23,6 +23,7 @@ function SignIn() {
         setUser(currentUser);
     });}, [])
 
+
   //Login with EMAIL AND PASSWORD
   const login = async () => {
     try {
@@ -36,10 +37,17 @@ function SignIn() {
         localStorage.setItem("isAuth", true);
         window.location.pathname = "/";
       }
+      else if(auth.currentUser.emailVerified === false){
+        alert("Please verify your email first");
+      }
+      else{
+        alert("ERROR");
+      }
 
       console.log(user);
     } catch (error) {
       console.log(error.message);
+      alert(error.message);
     }
   };
   //Login with EMAIL AND PASSWORD/////////
@@ -74,6 +82,10 @@ function SignIn() {
       console.log(isAuth);
     };
   //Verify Data///////////
+
+
+
+  
   return (
     <div id='SignInMainDiv'>
     <div className="signin">
@@ -81,12 +93,14 @@ function SignIn() {
         <h3> Login </h3>
         <input
           placeholder="Email..."
+          type="email"
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
         />
         <input
           placeholder="Password..."
+          type="password"
           onChange={(event) => {
             setLoginPassword(event.target.value);
           }}
