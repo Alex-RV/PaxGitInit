@@ -16,13 +16,13 @@ import { auth } from "../../Firebase.js";
 
 function NavBarIndex() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-  const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-    setShow(!show);
-  }
-  const hideDropdown = e => {
-    setShow(false);
-  }
+  // const [show, setShow] = useState(false);
+  // const showDropdown = (e)=>{
+  //   setShow(!show);
+  // }
+  // const hideDropdown = e => {
+  //   setShow(false);
+  // }
   //dropdown menu on hover
 
   
@@ -50,10 +50,7 @@ function NavBarIndex() {
         <Navbar.Collapse id='NavColor'>
           <Nav> 
             <NavDropdown title="Communication" 
-            id="collasible-nav-dropdown" 
-            show={show}
-            onMouseEnter={showDropdown} 
-            onMouseLeave={hideDropdown}>
+            id="collasible-nav-dropdown" >
               <NavDropdown.Item href="/communication/blog">Blog</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/communication/connectwithus">Connect With Us</NavDropdown.Item>
@@ -62,10 +59,7 @@ function NavBarIndex() {
             <Nav.Link href="/support">Support</Nav.Link>
             <NavDropdown
             title="Mental Health Info"    
-            id="collasible-nav-dropdown" 
-            show={show}
-            onMouseEnter={showDropdown} 
-            onMouseLeave={hideDropdown}>
+            id="collasible-nav-dropdown" >
               <NavDropdown.Item href="/mentalHealthInfo/Alzheimers">Alzheimers</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/mentalHealthInfo/Ptsd">PTSD</NavDropdown.Item>
