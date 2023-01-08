@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Support() {
+function support() {
   return (
     <div>support</div>
   )
 }
 
-export default Support
+export default support

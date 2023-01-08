@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ConnectWithUs() {
+function connectWithUs() {
   return (
     <div>connectWithUs</div>
   )
 }
 
-export default ConnectWithUs
+export default connectWithUs

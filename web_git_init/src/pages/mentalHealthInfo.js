@@ -1,9 +1,9 @@
 import React from 'react'
 
-function MentalHealthInfo() {
+function mentalHealthInfo() {
   return (
     <div>mentalHealthInfo</div>
   )
 }
 
-export default MentalHealthInfo
+export default mentalHealthInfo
