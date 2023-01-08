@@ -28,10 +28,15 @@ function CreatePost({ isAuth }) {
   };
 
   const createPost = async () => {
+    if (auth.currentUser.displayName == null || ""){
+        if(localStorage.getItem("name") == null || ""){
+            localStorage.setItem("name", "Anonymous");
+        }
+    }
     await addDoc(postsCollectionRef, {
       title,
       postText,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+      author: { name: localStorage.getItem("name"), id: auth.currentUser.uid },
     });
     navigate("/communication/blog");
   };
