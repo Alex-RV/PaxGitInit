@@ -34,15 +34,9 @@ function connectWithUs() {
         <div>
         <img src="https://media.discordapp.net/attachments/1032431371811033169/1061734633227681832/me2.jpg" alt="d" height="240px" width = "240px"/>
           <div className='aboutBorder'>
-<<<<<<< HEAD
-            <h2>Johnny Zheng</h2>
-            <p>Editor</p>
-            <p>Email: johnnyz.0527@gmail.com</p>
-=======
             <h2 style={{fontSize: "30px"}}>Johnny Zheng</h2>
             <p>Game developer</p>
-            <p>Email: johnnyz.0527@gmail.comg</p>
->>>>>>> bbc8ce5f29e94e946005c0fb6d2b247ab72c5dd8
+            <p>Email: johnnyz.0527@gmail.com</p>
           </div>
         </div>
         <div>
