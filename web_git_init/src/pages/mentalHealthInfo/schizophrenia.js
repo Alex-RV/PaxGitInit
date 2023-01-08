@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Schizophrenia = () => {
+const schizophrenia = () => {
   return (
 <div>
   
@@ -9,4 +9,4 @@ const Schizophrenia = () => {
   )
 }
 
-export default Schizophrenia
+export default schizophrenia

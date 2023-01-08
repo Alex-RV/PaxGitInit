@@ -20,6 +20,7 @@ import Alzheimers from './pages/mentalHealthInfo/alzheimers';
 import Ptsd from './pages/mentalHealthInfo/ptsd';
 import Schizophrenia from './pages/mentalHealthInfo/schizophrenia';
 import SignUp from './pages/signup';
+import { auth } from './Firebase';
 
 
 
