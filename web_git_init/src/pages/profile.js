@@ -7,6 +7,7 @@ import { auth, db } from "../Firebase.js"
 
 
 const Profile = () => {
+	window.onload = getDataUser;
 	const getDataUser = async () => {
 		const q = query(collection(db, "users"), where("email", "==", localStorage.getItem("email")));
 		const querySnapshot = await getDocs(q);
