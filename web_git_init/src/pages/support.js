@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Bubble from '../components/Bubble'
+import "./styles.css";
 
 function support() {
   return (
-    <div>support</div>
+    <div>
+
+      <Bubble />
+
+    </div>
   )
 }
 
