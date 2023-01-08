@@ -83,13 +83,14 @@
   display: inline-block;
   align-items: center;
   font-size: 24px;
-  margin: 5vh 40vh 5vh 40vh
+  margin: 10vh 40vh 0vh 40vh
 }
 
 
 
 #list{
   text-align:justify;
+  
 }
 
 #doubleBulletPoints{
@@ -124,4 +125,7 @@
   border-style: solid;
   border-radius: 20px;
   border-color: #400480;
+}
+#bottom-margin{
+  margin-bottom: 10vh;
 }

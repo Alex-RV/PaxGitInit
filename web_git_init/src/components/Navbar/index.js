@@ -72,7 +72,7 @@ function NavBarIndex() {
             
           </Nav>
 		  <Nav id='NavBarSignIn' className="ms-auto">
-      {!isAuth ? (<Nav.Link href="/signin" id='NavSignIn'>Sign In</Nav.Link>)
+      {!isAuth ? (<Nav.Link href="/signin2" id='NavSignIn'>Sign In</Nav.Link>)
       : (<Nav.Link onClick={signUserOut} id='NavSignIn'>Sign Out</Nav.Link>)}
 		  	{/* <Nav.Link onClick={signInWithGoogle} id='NavSignIn'>Sign In</Nav.Link> */}
 		  </Nav>

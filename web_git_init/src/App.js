@@ -37,7 +37,7 @@ function App() {
           <Route path='/communication/blog' element={<Blog/>} />        
           <Route path='/mentalHealthInfo' element={<MentalHealthInfo/>} />
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
-          <Route path='/signin' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
+          <Route path='/signin2' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
           <Route path='/signup' element={<SignUp/>} />
           {/* <Route path='/signup' element={<Protected isAuth={!isAuth}><SignUp/></Protected>} /> */}
           <Route path='/support' element={<Support/>} />

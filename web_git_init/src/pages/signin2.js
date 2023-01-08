@@ -114,16 +114,18 @@ function SignIN2() {
           placeholder="Email..."
           onChange={(event) => {
             setLoginEmail(event.target.value);
+            type="email"
           }}
         />
         <input
           placeholder="Password..."
           onChange={(event) => {
             setLoginPassword(event.target.value);
+            type="password"
           }}
         />
 
-        <button onClick={login}> Login</button>
+        <button onClick={login}> Log in</button>
       </div>
 
       <h4> User Logged In: </h4>
