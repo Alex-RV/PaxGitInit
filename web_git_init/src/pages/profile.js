@@ -7,19 +7,15 @@ import { auth, db } from "../Firebase.js"
 
 
 const Profile = () => {
+	
 	const getDataUser = async () => {
 		const q = query(collection(db, "users"), where("email", "==", localStorage.getItem("email")));
 		const querySnapshot = await getDocs(q);
 		querySnapshot.forEach((doc) => {
 			console.log(doc.id, " => ", doc.data());
-			if(doc.get("email") == auth.currentUser.email){
-				const name = String(doc.get("username"));
-				console.log(name)
-				auth.currentUser.displayName = name;
-				const email = auth.currentUser.email;
-				localStorage.setItem("name", name);
-				localStorage.setItem("email", email);
-			}
+			const name = doc.get("username");
+			console.log(name)
+			localStorage.setItem("name", name);
 		  });
 		return(localStorage.getItem("name"));
 	  };
