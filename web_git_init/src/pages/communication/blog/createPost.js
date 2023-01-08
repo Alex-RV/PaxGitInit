@@ -31,7 +31,7 @@ function CreatePost({ isAuth }) {
     await addDoc(postsCollectionRef, {
       title,
       postText,
-      author: { name: localStorage.getItem("name"), id: auth.currentUser.uid },
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     navigate("/communication/blog");
   };
