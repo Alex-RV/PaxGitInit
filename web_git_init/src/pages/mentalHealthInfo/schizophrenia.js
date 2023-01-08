@@ -3,7 +3,7 @@ import React from 'react'
 const Schizophrenia = () => {
   return (
     <>
-        <div className='background'>
+    <div className='background'>
       <div id = "Section">
         <p> <b>Summary:</b> Schizophrenia causes psychosis (hallucinations, delusions) and is often paired with disordered thought processes & motor functions that impairs the patient.</p>
       </div>
