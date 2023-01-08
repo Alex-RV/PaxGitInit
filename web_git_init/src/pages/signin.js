@@ -99,6 +99,8 @@ function SignIn() {
         <input
           placeholder="Email..."
           type="email"
+          class="form__field"
+          id='name' 
           onChange={(event) => {
             setLoginEmail(event.target.value);
           }}
@@ -106,19 +108,22 @@ function SignIn() {
         <input
           placeholder="Password..."
           type="password"
+          class="form__field"
           onChange={(event) => {
             setLoginPassword(event.target.value);
           }}
         />
+        
 
-        <button onClick={login}> Login</button>
-        <h6>Not yet register? <span>
-        <form action="/signup" class="inline">
-            <button class="float-left submit-button" >SignUp</button>
+        <button onClick={login} class="button-27" role="button"> Login</button>
+
+
+        <h6 id='RegisterYet'>Not yet register? <span>
+        <form action="/signup" id='RegisterYet'>
+            <button id='ButtonSignUp' class="button-27" role="button" >SignUp</button>
         </form>
         </span></h6>
       </div>
-
 
     <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign-In with Google</button>
 

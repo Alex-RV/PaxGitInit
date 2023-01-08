@@ -72,9 +72,11 @@ function Signup() {
   };
   return (
     <div id='SignInMainDiv'>
-        <h3> Register User </h3>
+    <div className="signin">
+    <h3> Register User </h3>
         <input
           placeholder="Name..."
+          class="form__field"
           onChange={(event) => {
             setRegisterName(event.target.value);
           }}
@@ -82,6 +84,7 @@ function Signup() {
         <input
           placeholder="Email..."
           input type="email"
+          class="form__field"
           onChange={(event) => {
             setRegisterEmail(event.target.value);
           }}
@@ -89,13 +92,15 @@ function Signup() {
         <input
           placeholder="Password..."
           input type="password"
+          class="form__field"
           onChange={(event) => {
             setRegisterPassword(event.target.value);
           }}
         />
 
-        <button onClick={register}> Create User</button>
-      </div>
+        <button class="button-27" role="button"  onClick={register}> Create User</button>
+    </div>
+    </div>
   )
 }
 
