@@ -4,7 +4,8 @@ import { useState } from "react";
 
 const Protected = ({ isAuth, children }) => {
   if (!isAuth) {
-    return <Navigate to="/" replace />;
+    alert("Sign In first")
+    return <Navigate to="/signin" replace />;
     }
   return children;
 };

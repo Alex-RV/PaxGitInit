@@ -20,8 +20,8 @@ import Alzheimers from './pages/mentalHealthInfo/alzheimers';
 import Ptsd from './pages/mentalHealthInfo/ptsd';
 import Schizophrenia from './pages/mentalHealthInfo/schizophrenia';
 import SignUp from './pages/signup';
-import { auth } from './Firebase';
-
+import { auth, db } from './Firebase';
+import CreatePost from './pages/communication/blog/createPost';
 
 
 function App() {
@@ -34,17 +34,17 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/communication/connectwithus' element={<ConnectWithUs/>} />
-          <Route path='/communication/blog' element={<Blog/>} />        
+          <Route path='/communication/blog' element={<Protected isAuth={isAuth}><Blog/></Protected>} />     
+          <Route path='/communication/blog/createpost' element={<Protected isAuth={isAuth}><CreatePost/></Protected>} />     
           <Route path='/mentalHealthInfo' element={<MentalHealthInfo/>} />
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
-          <Route path='/signin2' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
+          <Route path='/signin' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
           <Route path='/signup' element={<SignUp/>} />
           {/* <Route path='/signup' element={<Protected isAuth={!isAuth}><SignUp/></Protected>} /> */}
           <Route path='/support' element={<Support/>} />
           <Route path='/mentalHealthInfo/alzheimers' element={<Alzheimers/>} />
           <Route path='/mentalHealthInfo/ptsd' element={<Ptsd/>} />
           <Route path='/mentalHealthInfo/schizophrenia' element={<Schizophrenia/>} />
-          {/* <Route path="/createPost" element={<Protected isAuth={isAuth}><CreatePost/></Protected>} /> */}
         </Routes>
       </Router>
     </div>
