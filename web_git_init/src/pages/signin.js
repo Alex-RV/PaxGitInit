@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { auth, provider } from "../Firebase.js"
-import { signInWithPopup } from "firebase/auth"
+import { auth, provider, db } from "../Firebase.js"
+import { signInWithPopup } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore";
 import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
@@ -9,11 +10,11 @@ import "./styles.css"
 import { useNavigate } from "react-router-dom";
 
 function SignIn() {
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPassword, setLoginPassword] = useState("");
-  
-    const [user, setUser] = useState({});
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const [user, setUser] = useState({});
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   
 
   let navigate = useNavigate();
@@ -35,6 +36,10 @@ function SignIn() {
       if(auth.currentUser.emailVerified === true){
         setIsAuth(true);
         localStorage.setItem("isAuth", true);
+
+        const emailUser = auth.currentUser.email;
+        localStorage.setItem("email", emailUser);
+
         window.location.pathname = "/";
       }
       else if(auth.currentUser.emailVerified === false){
@@ -113,25 +118,6 @@ function SignIn() {
         </form>
         </span></h6>
       </div>
-    {/* <form action="">
-        <h1>Sign in</h1>
-        <input placeholder="Email..." 
-        onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }} />
-        <input placeholder="Password..." 
-        onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }} />
-        <button onClick={login}>Sign in </button>
-        <button onClick={verify}> verify</button>
-
-        <h6>Not yet register? <span>
-        <form action="/signup" class="inline">
-            <button class="float-left submit-button" >SignUp</button>
-        </form>
-        </span></h6>
-    </form> */}
 
 
     <button className="login-with-google-btn" onClick={signInWithGoogle}>Sign-In with Google</button>

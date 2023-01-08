@@ -20,10 +20,13 @@ import {
   onAuthStateChanged,
   signOut,
   sendEmailVerification,
+  getAuth,
 } from "firebase/auth";
 import "./styles.css"
 import { useNavigate } from "react-router-dom";
-import { auth } from "../Firebase.js"
+import { auth, db } from "../Firebase.js"
+import { getDatabase, ref, onValue} from "firebase/database";
+import { collection, query, where, doc, getDocs } from "firebase/firestore";
 
 function SignIN2() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -89,6 +92,8 @@ function SignIN2() {
     await signOut(auth);
   };
   const verify = async () => {
+    // const qa = query(doc(db, "users"), where("email", "==", localStorage.getItem("email")));
+	// console.log(qa);
     console.log(auth.currentUser.emailVerified );
     console.log(auth.currentUser.email);
     console.log(isAuth);
