@@ -2,7 +2,7 @@ import React from 'react'
 
 function connectWithUs() {
   return (
-    <div className='background contentAlign'>
+    <div className='background  '>
       <div className='About-Us'>
         <h1>Meet the team</h1>
       </div>
