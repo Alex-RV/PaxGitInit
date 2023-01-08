@@ -7,14 +7,13 @@ import {
 	Routes,
 	Route
   } from "react-router-dom";
-import About from './pages/about';
+// import About from './pages/about';
 import Home from './pages';
 import ConnectWithUs from './pages/communication/connectwithus';
 import Blog from './pages/communication/blog';
 import Profile from './pages/profile';
 import SignIn from './pages/signin';
 import Protected from './Protected';
-import MentalHealthInfo from './pages/mentalHealthInfo';
 import Support from './pages/support';
 import Alzheimers from './pages/mentalHealthInfo/alzheimers';
 import Ptsd from './pages/mentalHealthInfo/ptsd';
@@ -32,11 +31,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/about' element={<About/>} />
+          {/* <Route path='/about' element={<About/>} /> */}
           <Route path='/communication/connectwithus' element={<ConnectWithUs/>} />
           <Route path='/communication/blog' element={<Protected isAuth={isAuth}><Blog/></Protected>} />     
-          <Route path='/communication/blog/createpost' element={<Protected isAuth={isAuth}><CreatePost/></Protected>} />     
-          <Route path='/mentalHealthInfo' element={<MentalHealthInfo/>} />
+          <Route path='/communication/blog/createpost' element={<Protected isAuth={isAuth}><CreatePost/></Protected>} />    
           <Route path='/profile' element={<Protected isAuth={isAuth}><Profile/></Protected>} />
           <Route path='/signin' element={<Protected isAuth={!isAuth}><SignIn setIsAuth={setIsAuth}/></Protected>} />
           <Route path='/signup' element={<SignUp/>} />
