@@ -51,11 +51,12 @@ function NavBarIndex() {
           <Nav> 
             <NavDropdown title="Communication" 
             id="collasible-nav-dropdown" >
-              <NavDropdown.Item href="/communication/blog">Blog</NavDropdown.Item>
+            {isAuth && <NavDropdown.Item  href="/profile">Profile</NavDropdown.Item>}
+              {/* <NavDropdown.Item href="/communication/blog">Blog</NavDropdown.Item> */}
               <NavDropdown.Divider />
               <NavDropdown.Item href="/communication/connectwithus">Connect With Us</NavDropdown.Item>
             </NavDropdown>
-			<Nav.Link href="/about">About</Nav.Link>
+			      <Nav.Link href="/communication/blog">Blog</Nav.Link>
             <Nav.Link href="/support">Support</Nav.Link>
             <NavDropdown
             title="Mental Health Info"    
@@ -67,7 +68,7 @@ function NavBarIndex() {
               <NavDropdown.Item href="/mentalHealthInfo/Schizophrenia">Schizophrenia</NavDropdown.Item>
             </NavDropdown>
 
-            {isAuth && <Nav.Link href="/profile">Profile</Nav.Link>}
+            
             {/* {window.location.pathname === "/communication/blogs" && <Nav.Link href="/createPost">Create Post</Nav.Link>} */}
             
           </Nav>

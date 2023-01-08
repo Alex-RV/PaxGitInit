@@ -408,7 +408,10 @@
 .aboutBorder{
   margin: 5vh 2vh 30vh 2vh;
   text-align: center;
-  ;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ebebeb;
+
 }
 
 #imageDisplay {
@@ -453,3 +456,14 @@ grid-row-end: 3;
   height: 248px;
   
 }
+
+img{
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #4E066D;
+}
+.contentAlign{
+  align-items: center;
+}
+
+
