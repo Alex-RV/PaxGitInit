@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './MyStyles.css';
 const Alzheimers = () => {
   return (
     <>
@@ -17,7 +17,7 @@ const Alzheimers = () => {
               <li>A family history of Alzheimer's does not guarantee Alzheimer's, but it will be responsible for a higher chance of developing Alzheimer's.</li>
             </ol>
             <p>A person that stays healthy as they age will likely not get Alzheimer's.</p>
-            <p>In order to achieve a healthy lifestyle, <b>do the following:</b></p>
+            <p>In order to achieve a healthy lifestyle, <b>maintain/do the following:</b></p>
             <ol id="doubleBulletPoints">
               <li>Proper nutrition and a balanced diet</li>
               <li>Enough physical activity every day, this could be as simple as a 30 minute walk</li>
@@ -52,11 +52,11 @@ const Alzheimers = () => {
       <div id='Section'>
       <p><b>Symptoms:</b></p>      
         <ul id="list">
-          <li>Memory loss that disrupts daily life, such as forgetting how to navigate a familiar place.</li>
-          <li>Trouble handling money and paying bills.</li>
-          <li>Difficulty completing familiar tasks at home, at work or at leisure.</li>
-          <li>Decreased or poor judgment.</li>
-          <li>Changes in mood, personality, or behavior.</li>
+          <li>• Memory loss that disrupts daily life, such as forgetting how to navigate a familiar place.</li>
+          <li>• Trouble handling money and paying bills.</li>
+          <li>• Difficulty completing familiar tasks at home, at work or at leisure.</li>
+          <li>• Decreased or poor judgment.</li>
+          <li>• Changes in mood, personality, or behavior.</li>
         </ul>
       </div>
 
@@ -69,9 +69,6 @@ const Alzheimers = () => {
             <li>Slowing or delaying symptoms of the disease.</li>
         </ol>
       </div>
-
-
-
 
     </div></>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './MyStyles.css';
 const Schizophrenia = () => {
   return (
     <>
@@ -40,7 +40,7 @@ const Schizophrenia = () => {
             This may show in a number of ways, from childlike silliness to unpredictable agitation. Behavior isn't focused on a goal, so it's hard to do tasks. Behavior can include resistance to instructions, inappropriate or bizarre posture, a complete lack of response, or useless and excessive movement.
           </li>
           <li>
-            <b>reduced or lack of ability to function normally: </b>
+            <b>Reduced or lack of ability to function normally: </b>
             For example, the person may neglect personal hygiene or appear to lack emotion (doesn't make eye contact, doesn't change facial expressions or speaks in a monotone). Also, the person may lose interest in everyday activities, socially withdraw or lack the ability to experience pleasure.
           </li>
         </ul>
@@ -79,7 +79,8 @@ const Schizophrenia = () => {
                   <li><b>Risperidone (Risperdal)</b></li>
                   <li><b>Ziprasidone (Geodon)</b></li>
                   </ol>          
-                </li><b>Long-acting injectable antipsychotics</b>
+                </li>
+                <li><b>Long-acting injectable antipsychotics: </b></li>
                 <p><small>(Some antipsychotics may be given as an intramuscular or subcutaneous injection. They are usually given every two to four weeks, depending on the medication. Ask your doctor about more information on injectable medications. This may be an option if someone has a preference for fewer pills and may help with adherence)</small></p>
                 <p>Common medications that are available as an injection include: </p>
                 <ol id="tripleBulletPoints">
@@ -97,7 +98,7 @@ const Schizophrenia = () => {
                 <li><b>Individual therapy: </b> <p>Psychotherapy may help to normalize thought patterns. Also, learning to cope with stress and identify early warning signs of relapse can help people with schizophrenia manage their illness.</p></li>
                 <li><b>Social skills training: </b> <p>This focuses on improving communication and social interactions and improving the ability to participate in daily activities.</p></li>
                 <li><b>Family therapy: </b><p>This provides support and education to families dealing with schizophrenia.</p></li>
-                <li><b>Vocational rehabilitation and supported employment:</b><p>This focuses on helping people with schizophrenia prepare for, find and keep jobs.</p></li>
+                <li><b>Vocational rehabilitation and supported employment:</b><p>This focuses on helping people with schizophrenia prepare for, find, and keep jobs.</p></li>
               </ol>
             </li>
         </ol>
