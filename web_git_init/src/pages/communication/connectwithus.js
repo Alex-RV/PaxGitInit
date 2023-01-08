@@ -36,7 +36,7 @@ function connectWithUs() {
           <div className='aboutBorder'>
             <h2>Johnny Zheng</h2>
             <p>Editor</p>
-            <p>Email: johnnyz.0527@gmail.comg</p>
+            <p>Email: johnnyz.0527@gmail.com</p>
           </div>
         </div>
         <div>
