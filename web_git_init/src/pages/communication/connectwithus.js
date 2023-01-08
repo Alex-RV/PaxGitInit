@@ -2,16 +2,6 @@ import React from 'react'
 
 function connectWithUs() {
   return (
-<<<<<<< HEAD
-    <div class="about-section">
-  <h1>Connect With Us</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>Here is the team!</p>
-    </div>
-   
-
-
-=======
     <div className='background'>
       <div className='About-Us'>
         <h1>Meet the team</h1>
@@ -59,7 +49,6 @@ function connectWithUs() {
         </div>
         </div>
       </div>
->>>>>>> 3222e59afbfd29b530173f4dad79ce05ca393a64
   )
 }
 
