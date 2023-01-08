@@ -408,9 +408,30 @@
 .aboutBorder{
   margin: 5vh 2vh 30vh 2vh;
   text-align: center;
-  ;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ebebeb;
+
 }
 
-#imageDisplay {
+.aboutBorder:hover{
+  margin: 5vh 2vh 30vh 2vh;
+  text-align: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: goldenrod;
+  background-color: #320546 ;
+  color: goldenrod;
 
 }
+
+img{
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #4E066D;
+}
+.contentAlign{
+  align-items: center;
+}
+
+
