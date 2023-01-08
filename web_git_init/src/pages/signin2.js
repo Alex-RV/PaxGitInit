@@ -88,11 +88,13 @@ function SignIN2() {
           onChange={(event) => {
             setRegisterEmail(event.target.value);
           }}
+          type="email"
         />
         <input
           placeholder="Password..."
           onChange={(event) => {
             setRegisterPassword(event.target.value);
+            type="password"
           }}
         />
         <input
