@@ -27,8 +27,8 @@ function Blog({ isAuth }) {
   return (
     <div className="homePage">
     <div>
-    <form action="/communication/blog/createpost" class="inline">
-            <button class="float-left submit-button" >Create Post</button>
+    <form action="/communication/blog/createpost" class="float-left submit-button">
+            <button  class="button-27" role="button" >Create Post</button>
         </form>
     </div>
       {postLists.map((post) => {

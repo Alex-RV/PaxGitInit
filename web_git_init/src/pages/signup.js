@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   sendEmailVerification,
+  updateProfile,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../Firebase.js"
@@ -29,12 +30,12 @@ function Signup() {
   //   });
   // }
 
-  const addUsers = async () => {
-    await addDoc(usersCollectionRef, {
-      email: registerEmail,
-      username: registerName,
-    });
-  };
+  // const addUsers = async () => {
+  //   await addDoc(usersCollectionRef, {
+  //     email: registerEmail,
+  //     username: registerName,
+  //   });
+  // };
 
   let navigate = useNavigate();
 
@@ -51,10 +52,9 @@ function Signup() {
         registerPassword
       ).then(() => {
         sendEmailVerification(auth.currentUser).then(() => {
-            const nameUser = registerName;
-            localStorage.setItem("name", nameUser);
-            setUserId("id" + Math.random().toString(16).slice(2));
-            addUsers();
+            // const nameUser = registerName;
+            // localStorage.setItem("name", nameUser);
+            // addUsers();
             navigate("/signin");
             alert("Successfully created accaunt, please verify email and Sign-IN");
         });
@@ -63,6 +63,9 @@ function Signup() {
         const errorMessage = error.message;
         alert(error.message);
       });
+      await updateProfile(auth.currentUser, { displayName: registerName }).catch(
+        (err) => console.log(err)
+      );
       console.log(user);
       
     } catch (error) {

@@ -16,7 +16,9 @@ const Profile = () => {
 				const name = String(doc.get("username"));
 				console.log(name)
 				auth.currentUser.displayName = name;
+				const email = auth.currentUser.email;
 				localStorage.setItem("name", name);
+				localStorage.setItem("email", email);
 			}
 		  });
 		return(localStorage.getItem("name"));

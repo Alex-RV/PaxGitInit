@@ -10,15 +10,19 @@ function CreatePost({ isAuth }) {
 
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
-
   const getDataUser = async () => {
     const q = query(collection(db, "users"), where("email", "==", localStorage.getItem("email")));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
-        const name = doc.get("username");
-        console.log(name)
-        localStorage.setItem("name", name);
+        if(doc.get("email") == auth.currentUser.email){
+            const name = String(doc.get("username"));
+            console.log(name)
+            auth.currentUser.displayName = name;
+            const email = auth.currentUser.email;
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+        }
       });
     return(localStorage.getItem("name"));
   };
@@ -35,6 +39,7 @@ function CreatePost({ isAuth }) {
 
 
   return (
+    window.onload = getDataUser,
     <div className="createPostPage">
       <div className="cpContainer">
         <h1>Create A Post</h1>
