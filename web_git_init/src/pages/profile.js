@@ -13,8 +13,9 @@ const Profile = () => {
 		querySnapshot.forEach((doc) => {
 			console.log(doc.id, " => ", doc.data());
 			if(doc.get("email") == auth.currentUser.email){
-				const name = doc.get("username");
+				const name = String(doc.get("username"));
 				console.log(name)
+				auth.currentUser.displayName = name;
 				localStorage.setItem("name", name);
 			}
 		  });
