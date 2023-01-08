@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Shape from '../components/Shape'
-import "./styles.css";
-
-=======
 import React, { Component } from 'react';
 import './styles.css';
 
@@ -67,18 +61,10 @@ import './styles.css';
 //       </div>
 //       <div id='Section'></div>
 
->>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 function index(){
   return (
     <div>
 
-<<<<<<< HEAD
-      <Shape/>
-
-    
-
-     </div>    
-=======
     
 
       <h1> Broad Overview </h1>
@@ -92,7 +78,6 @@ function index(){
       <p>  </p>
 
     </div>    
->>>>>>> 9829e70b2f45557c266d14dfb7c83acda450e9f9
 
   )
 }
