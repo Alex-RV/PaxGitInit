@@ -23,7 +23,6 @@ import SignUp from './pages/signup';
 import { auth } from './Firebase';
 
 
-
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   return (

@@ -62,7 +62,7 @@ const Alzheimers = () => {
 
       <div id='Section'>
       <p><b>Treatments: </b><small>Unfortunately, there is no known cure for Alzheimer's.</small></p>   
-      <p>If possible, current treatments should address to help people with Alzheimer's in the following ways: </p>   
+      <p>If possible, treatments should address to help people with Alzheimer's in the <b>following ways</b>: </p>   
         <ol id="list">
             <li>Helping people maintain brain health.</li>
             <li>Managing behavioral symptoms.</li>
