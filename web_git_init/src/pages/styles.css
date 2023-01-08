@@ -414,15 +414,47 @@
 
 }
 
-.aboutBorder:hover{
-  margin: 5vh 2vh 30vh 2vh;
-  text-align: center;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: goldenrod;
-  background-color: #320546 ;
-  color: goldenrod;
+#imageDisplay {
 
+}
+.trueBubble{
+align-self: center;
+text-align: center;
+border-radius:20px 20px 20px 20px;
+-moz-border-radius:20px 20px 20px 20px;
+-webkit-border-radius:20px 20px 40px 20px;
+background:#7c06ab; 
+height:240px;
+width: 280px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+display: inline-block;
+position: absolute;
+right: 575px;
+top: 430px;
+transition: width 2s,  height 4s;
+}
+
+
+.Bubble{
+text-align: center;
+align-self: center;
+border-radius:10px 10px 10px 10px;
+-moz-border-radius:10px 10px 10px 10px;
+-webkit-border-radius:10px 10px 10px 10px;
+background:#7c06ab; 
+height:245px;
+width:700px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;  
+display: inline-block;
+grid-row-start: 1;
+grid-row-end: 3;
+
+}
+
+.trueBubble:hover {
+  width: 500px;
+  height: 248px;
+  
 }
 
 img{
