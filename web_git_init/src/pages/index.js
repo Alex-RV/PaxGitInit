@@ -64,10 +64,8 @@ import './styles.css';
 function index(){
   return (
     <div>
-
-    
-
-      <h1> Broad Overview </h1>
+    <div id='indexDivMain'>
+    <h1> Broad Overview </h1>
       
       <p1> We are <b>Pax</b> </p1>
       <o/>
@@ -75,7 +73,8 @@ function index(){
       
       <h2> Why are we doing this? </h2>
       <p> We are doing this to lead others down a path of mental wellbeing </p>
-      <p>  </p>
+    </div>
+      <iframe src="https://itch.io/embed/1868698" width="552" height="167" frameborder="0"><a href="https://impomu.itch.io/pax-project%22%3EPax"> Project: Git Init 2023 by ImPomu</a></iframe>
 
     </div>    
 

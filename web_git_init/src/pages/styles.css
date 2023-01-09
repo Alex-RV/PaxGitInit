@@ -397,12 +397,25 @@
 #sectionHeader{
   display: inline-block;
   font-size: 36px;
+  flex: auto;
   margin: 10vh 40vh 0vh 40vh
+
 }
 
 .About{
-  margin: 10vh 5vh 5vh 10vh;
+  /* margin: 10vh 5vh 5vh 10vh; */
   display: flex;
+  width: auto;
+  justify-content: space-between;
+  max-width:min-content;
+}
+#about{
+  width: 50%;
+  height: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  -ms-flex: auto;
+  
 }
 
 .aboutBorder{
@@ -411,6 +424,7 @@
   border-style: solid;
   border-radius: 10px;
   border-color: #ebebeb;
+  flex:auto;
 
 }
 
@@ -465,5 +479,8 @@ img{
 .contentAlign{
   align-items: center;
 }
-
+#indexDivMain{
+  color: #edd68a;
+  margin: 30px;
+}
 
