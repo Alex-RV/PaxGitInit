@@ -483,4 +483,71 @@ img{
   color: #edd68a;
   margin: 30px;
 }
+.button {
+  margin-top: 20px; 
+  background-color: #fcef03;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #31013f;
+  border-radius: calc(1px + 2vmin);
+  border-width: 0px; 
+  position: relative;
+  padding: 20px;
+  /* width: 200px; */
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+.button:hover {
+  transition-delay: 0.1s;
+  border-color: #fcef03;
+  border-width: 1px;
+  background-color: #5f0569;
+  color: #fcef03;
+
+}
+
+.button:after {
+  content: "";
+  background: #810d8e;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: calc(25px);
+}
+
+#gitHubDiv{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #edd68a;
+}

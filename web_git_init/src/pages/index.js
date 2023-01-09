@@ -76,7 +76,29 @@ function index(){
     </div>
       <iframe src="https://itch.io/embed/1868698" width="552" height="167" frameborder="0"><a href="https://impomu.itch.io/pax-project%22%3EPax"> Project: Git Init 2023 by ImPomu</a></iframe>
 
+    <div id='gitHubDiv'>
+    <div>
+    <h2>The GitHub link on the Website</h2>
+    <ul>
+          <li>
+            <a href="https://github.com/Alex-RV/PaxGitInit">
+              <button class="button"><span>Github</span></button>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <h2>The GitHub link on the Game</h2>
+    <ul>
+          <li>
+            <a href="https://github.com/gutsyguy/git-init-game">
+              <button class="button"><span>Github</span></button>
+            </a>
+          </li>
+        </ul>
+    </div>
+      
     </div>    
+    
 
   )
 }
